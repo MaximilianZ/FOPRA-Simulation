@@ -4,21 +4,14 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-\usepackage{hyperref}
 
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{flafter} %Packet stellt sicher, dass Gleitobjekte niemals vor dem Verweis erscheinen, drastische Lösung, fals unerwünschte Effekte auftreten benutze \suppressfloats[position] - Befehl
-\usepackage{multirow} % def. \multirow mit diesem Befehl lassen sich automatisch Tabellen mit mehrzeiligen Spalten erstellen.
+\usepackage{amsmath, amsfonts, amssymb, graphicx, flafter, multirow, fancyhdr, hyperref}
 
-\usepackage{fancyhdr}
 \pagestyle{fancy}
 
 \fancyhf{}
-\fancyhead[L]{{\small Anfängerprakikum 3\\Experiment: FHV}}
-\fancyhead[C]{{\small Lorenz Schlechter, \\Thomas Kraetzschmar}}
+\fancyhead[L]{{\small FOPRA - Physics Simulation with Geant4}}
+%%\fancyhead[C]{{\small Lorenz Schlechter, \\Thomas Kraetzschmar}}
 \fancyhead[R]{{\small\date{\today}}}
 \fancyfoot[C]{\thepage}
 \pagestyle{fancy}
@@ -30,13 +23,14 @@
 
 % Title Page
 \title{%
-	{\Huge Frank-Hertz Experiment}\\[0.5\baselineskip] 
-	{\normalsize Group C314}
+	{\Huge Physics Simulation with Geant4}\\[0.5\baselineskip] 
+	{\normalsize Gruppe 51}
     }
 
 \author{%
     Thomas Kraetzschmar 
 	\and Lorenz Schlechter
+	\and Maximilian Ziegler
 	}
 
 \date{\today}
@@ -59,62 +53,7 @@
 
 %*************************************************************************************
 \section{Introduction}
-The Frank-Hertz-Experiment is a historical experiment proving Bohr's hypothesis, that electrons can only be found in discrete distance to the core of the atom. As proof, electrons are accelerated by a variable voltage. If the electrons possess at least the energy corresponding to the difference between two orbitals, they can collide inelastically with the atoms' hull-electrons and prompt them into a higher orbital. The moving electrons lose energy during this collision, so that they can no longer cross the counter voltage. When the electrons fall back to their original level, they emit photons.
-\section{Determination of the Hg-Line}
-In the first experiment, we studied quicksilver. The maxima of the FH-signal were found at $21,4\pm0,3V$, $26,1\pm0,3V$, $31,5\pm0,4V$ and $36,2\pm0,4V$. To measure the voltage, we used a multimeter. This multimeter has a systematic error of 1 digit because of the offset, of 1 digit due to the digital display and an error of 0,5 \% because of the calibration's slope. Moreover we assumed a statistical error while determining the position of the maxima of 0,1V. This results in the above-mentioned errors.
-To determine the wavelength of the emitted photons, we require the average difference between two maxima. We obtain a $\Delta U$ of $4,9\pm0,6V$. The errors are calculated as follows:\\\\
-- The systematic error of the offset is eliminated by subtraction.\\
-- The systematic error of the display is doubled, as it can be wrong in both directions and is linearly added.\\
-- The systematic error of the slope is 0,5\% of the difference.\\
-- The statistical error is calculated by taking the standard deviation of the 3 different results.\\\\
-For the wavelength holds the following equation:
-\begin{equation}
-\lambda={h\cdot c \over \Delta U \cdot e}
-\end{equation}
-h being the Planck constant, c being the speed of light and e being the electron charge. All constants are assumed to be highly correct compared to the results of the experiment, therefore their effect on the error can be neglected.This results in a wavelength of $251\pm 32$ nm.
-The error of the wavelength can be calculated as follows due to linear and quadratic addition in this case being the same:
-\begin{equation}
-\Delta \lambda=|\Delta \Delta U\cdot {\partial \lambda\over \partial \Delta U}|
-\end{equation}
-$\Delta\Delta U$ being the error of $\Delta U$ and 
-\begin{equation}
-{\partial \lambda\over \partial \Delta U}= -{h\cdot c\over (\Delta U)^2\cdot e}
-\end{equation}
-\section{Neon}
-The same experiment was repeated using neon. Now the maxima were at $20,1\pm 0,3$, $37,3\pm 0,4$, $56,8\pm 0,5$ and $75,7\pm 0,6$, resulting in an average $\Delta U$ of $18,5\pm1,5V$ and a wavelength of $66,9\pm5,4$ nm. The errors were calculated the same way as with Hg. This wavelength is not the emitted wavelength, because neon electrons do not fall directly down to the base state. The base state is $1s^2$$2s^2$$2p^6$. Because of the collision, one of the p-electrons is elevated to a 3p-orbital, resulting in the new configuration of $1s^2$$2s^2$$2p^53p^1$. This electron then falls down to a 2s-orbital before reaching the base state in a second step.
 
-To determine the actual wavelengths of neon the emitted light was examined with a handhold spectrometer. First the scale was calibrated using the soda double line. Thereby an uncertainty of one scale distance is assumed. In the second steps 3 of the 5 seen lines were determined to be at $650\pm 20$ nm for the red one, $630\pm20$ nm for the orange and $590\pm 20$ nm for the yellow one. Thereby another error of one scale was made, resulting in a total error of 20 nm for each line. 
-
-\section{Questions}
-\subsection{Explain elastic collision and inelastic collision?}
-An elastic collision is defined as a collision of objects with no loss of kinetic energy, whereas an inelastic collision is every collision with a loss of kinetic energy. This energy is often used for the deformation of the two colliding objects and furthermore transformed into heat during the deformation. On a more microscopic scale, the energy of a free electron colliding with a tied one is used to lift the tied electron to a higher orbital.
-
-%_____________________________________________________________________________________
-\subsection{Why can electrons with a kinetic energy lower than 4.9 eV only collide elastically?}
-In order to lift a tied electron to a higher shell, the free electron colliding with the tied one has to possess an energy of at least 4.9 eV to lift the tied electron to a higher orbital. If not, we observe an elastic collision, because no kinetic energy is transformed into another type of energy and therefore there is no loss of kinetic energy.
-
-%_____________________________________________________________________________________
-\subsection{Why can an electron colliding with an atom elastically transfer only a bit of energy?}
-An atom consists of a positively charged core and negatively charged electrons orbiting the core. The chances of a free electron colliding with the core are very low, because it is very small. Furthermore the orbiting electrons - far away from the core, considering the size of the atom core - also prevent the free electrons of colliding with the core, due to the equal charge of the electrons causing a deflection. These electrons have a relatively constant kinetic energy. If the free electrons' energy is to low to lift the orbiting electron to another orbit, the amount of energy transferred from the free to the orbiting electron is limited. The limit is given by the possible variation of the orbiting electrons' kinetic energy. As said before, this variation is very small and so the energy which can be transferred.
-
-\subsection{How does an atom exited by an inelastic collision dispose itself of the acquired energy?}
-The atom separates itself from the energy by emitting light. The wavelength of the light is directly connected to the energy freed by the de-excitation of the electron. The wavelength is given by formula \ref{f1}.
-%
-\begin{equation}
-    \label{f1}
-        \lambda = \frac{h \cdot c}{\Delta E}
-\end{equation} 
-%
-The return of the lifted electron is not always direct, the exited atom can also de-excite step by step. In doing so it emits different wavelengths, each for every step and orbit.
-
-\subsection{What is the difference between the excitation of an atom by electrons and by light quanta?}
-The light quanta are absorbed by the atom, the electron is not. In both cases the objects collide. While the light is absorbed the free electron still exists after the collision, only loosing kinetic energy. After the excitation the atom eventually separates it self of the acquired energy as described above.  
-\subsection{Why is there the need for a Deceleration Voltage?}
-If no counter voltage was used, each electron would reach the anode, no matter how much energy it has left after the collision. So it would be impossible to see the decrease at the respective energy states.
-\subsection{Differences between the Frank-Hertz-experiment and a Fluorescent Lamp}
-In a fluorescent lamp electrons move with high energy through a gas, ionizing it. When the gas returns to its base state, it emits light. The necessary heat to set the electrons free is caused by the resistance of the cathode itself, making additional heating unnecessary. In difference to the Frank-Hertz-experiment ionisation is wanted.
-\subsection{Differences to a X-ray Tube}
-In an X-ray tube the electrons do not move through gas, but through vacuum and they are accelerated by high voltage. When they hit the anode they are rapidly decelerated, emitting bremsstrahlung.
 
 
 %\bibliographystyle{alpha}
