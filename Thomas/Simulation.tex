@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt,twoside]{article}
+\documentclass[a4paper,14pt,twoside]{article}
 \usepackage[german]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -106,11 +106,11 @@ Die Effizienz setzt sich zusammen aus der geometrischen Effizienz und der Detekt
 \end{equation}
 Die Photopeakeffizienz ergibt sich damit als
 \begin{equation}
-\eta_{Photopeak}={N_{peak}\over N_0\cdot\eta_{geometrisch}}
+\eta_{Photopeak}={N_{peak}\over N_0\cdot\eta_{geometrisch}} \label{eq:Photopeak}
 \end{equation}
 Wobei $N_0$ die Anzahl der emitierten Photonen ist, die sich aus der Aktivität ergibt. Der kleine Detektor besteht aus einem Kristall der Frontfläche $A=11mm^2=121mm^2$. Der Wert für die Kirstalldimensionen wurde aus der Simulation ausgelesen. Bei der ersten Messung betrug der Abstand zur Detektorbox 3cm, der Gesamtabstand zwischen Quelle und Detektorkristall also 4cm. Damit ergibt sich eine geometrische Effizienz von 0,602\%. Zusammen mit der Aktivität von 164,11kBq sowie der Messzeit von 7 Minuten ergibt sich eine Photopeakffizienz von
 \begin{equation}
-\eta_{Photopeak}={87710\over 7\cdot60\cdot164110\cdot0,0602}=21,22\%
+\eta_{Photopeak}={87710\over 7\cdot60\cdot164110\cdot0,00602}=21,22\%
 \end{equation}
 Analog ergibt sich für die zweite Messung eine Auflösung von 20,91keV bzw 31,293keV und eine Effizienz von $\eta_{geometrisch}=0,096\%$ und $\eta_{Photopeak}=17,76\%$
 Der große Kristall, der in Messung 3 und 4 verwendet wird, besteht aus zwei Kristallen. Die Eichung für diese ergibt die Gleichungen :
@@ -126,7 +126,7 @@ Die gaußschen Fits der Peaks liefern bei 511 keV eine über beide fits gemittel
 \section{Reproduktion der Messungen}
 	\subsection{Erster Aufbau}
 		\subsubsection{Simulationsaufbau}
-		Bei dieser Simulation wird versucht, die Messergebnisse des experimentellen Versuches mit dem Aufbau Nummer 1 zu reproduzieren. Die Programmierung hierzu war bereits geschehen und es muss nur noch die Simulation gestartet werden. Zur Simulation wurde eine Anzahl von $10^6$ Events gewählt. 
+		Bei dieser Simulation wird versucht, die Messergebnisse des experimentellen Versuches mit dem Aufbau Nummer 1 zu reproduzieren. Die Programmierung hierzu war bereits geschehen und es muss nur noch die Simulation gestartet werden. Zur Simulation wird eine Anzahl von $10^6$ Events gewählt. 
 		
 		
 		\subsubsection{Ergebnisse}
@@ -145,7 +145,7 @@ Für die Berechnung der Effizienz wird folgende Formel verwendet:
 \begin{align}
 	\epsilon = \frac{N_{\textrm{peak}}}{N}
 \end{align}
-Wobei $N_\textrm{peak}$ die Anzahl der Events, die in dem entsprechenden Peak stattfinden und N die gesamte Anzahl an Events entspricht, die in der Simulation berechnet wurden. Somit ergibt sich eine Effizienz von $3.27\cdot 10^{-2}\%$ des Peaks bei 511 eV und {\color{Red}???} des Peaks bei 1275 eV. Die hierbei verwendeten Werte wurden durch einen Gauss-Fit ermittelt, wofür hier exemplarisch der Fit für den 511 eV Peak in der Abbildung (\ref{S1_511_fit}) abgebildet ist. Für die Berechnung der Anzahl der Events wurde die FWHM Verteilung verwendet.   
+Wobei $N_\textrm{peak}$ die Anzahl der Events, die in dem entsprechenden Peak stattfinden und N die gesamte Anzahl an Events entspricht, die in der Simulation berechnet wurden. Somit ergibt sich eine Effizienz von $(3.27\cdot 10^{-2}\%$ des Peaks bei 511 eV (ermittelt: $(508\pm 9)$eV)  und $(1.8\cdot 10^{-3}\%$ des Peaks bei 1275 eV (ermittelt: $(1.29\pm 0.03)$keV). Die hierbei verwendeten Werte wurden durch einen Gauss-Fit ermittelt, wofür hier exemplarisch der Fit für den 511 eV Peak in der Abbildung (\ref{S1_511_fit}) abgebildet ist. Für die Berechnung der Anzahl der Events wurde die FWHM Verteilung verwendet. Insgesamt ergibt sich eine Photopeak-Effizienz von $\mu_\textrm{Photopeak 511eV}=5.43\cdot 10^{-2} \% $ und $\mu_\textrm{Photopeak 1275eV}=2.9\cdot 10^{-3} \% $. Diese berechnet sich analog mit Formel (\ref{eq:Photopeak}). Die Auflösung des Detektors berechnet sich analog zu den experimentellen Versuchen und betragen somit 171 eV bei 511 eV und 91 eV bei 1275 eV.
 		
 \begin{figure}[H]
 	\begin{center}
@@ -159,35 +159,38 @@ Wobei $N_\textrm{peak}$ die Anzahl der Events, die in dem entsprechenden Peak st
 		
 	\subsection{Aufbau Nummer 3}
 		\subsubsection{Simulationsaufbau}
-			Um diesen Aufbau nachzubilden, muss eine weitere Box implementiert werden. Diese hat die Ausmaße (100x81x200mm$^3$) mit einer Dicke von 6mm, so dass zwei Kristalle mit dem Volumen 29x13x130mm$^3$ darin übereinander platziert werden können. Es werden $10^7$ Events simuliert. 
+			Um diesen Aufbau nachzubilden, muss eine weitere Box implementiert werden. Diese hat folgende Ausmaße (100x81x200mm$^3$) mit einer Dicke von 6mm, so dass zwei Kristalle mit dem Volumen 29x13x130mm$^3$ darin übereinander platziert werden können. Es werden $10^7$ Events simuliert. Alle Abstände sind wie in dem entsprechenden Versuch. 
 			
 		\subsubsection{Ergebnisse}
-			Bei dieser Simulation werden insgesamt 3 verschiedene Spektren aufgenommen. Hier sollen jeweils nur die des 1. Kristall in der großen Box gezeigt werden, alle weiteren Abbildungen befinden sich in dem Anhang. 
-			Auch hierfür können die jeweiligen Effizienzen berechnet werden. Diese betragen: \\
+			Bei dieser Simulation werden insgesamt 3 verschiedene Spektren aufgenommen. Es werden beispielhaft hier nur die Abbildungen des 1. Kristalls in der großen Box verwendet, alle weiteren Abbildungen befinden sich im Anhang.
+			Auch hierfür können die jeweiligen Effizienzen analog berechnet werden. Diese betragen: \\
 			\begin{figure}[H]
 			\begin{center}
 			
 			
-			\begin{tabular}{|c|c|}
+			\begin{tabular}{|c|c|c|c|}
 			\hline 
-			\rule[-1ex]{0pt}{2.5ex} Kristall & $\epsilon$ \\ 
+			\rule[-1ex]{0pt}{2.5ex} Kristall & $\epsilon$ & Photopeak-Effizienz & Auflösung [eV]\\ 
 			\hline 
-			\rule[-1ex]{0pt}{2.5ex} kleiner 511 eV & $1.32\cdot 10^{-2}\%$ \\ 
+			\rule[-1ex]{0pt}{2.5ex} kleiner 511 eV & $1.32\cdot 10^{-2}\%$ & $2.19\cdot 10^{-2}\%$ & $(93.3\pm 1.9)$ \\ 
 			\hline 
-			\rule[-1ex]{0pt}{2.5ex} kleiner 1275 eV & $1.44\cdot 10^{-3}\%$ \\ 
+			\rule[-1ex]{0pt}{2.5ex} kleiner 1275 eV & $1.44\cdot 10^{-3}\%$ & $2.39\cdot 10^{-3}\%$ &  $(268.4\pm 509.2)$\\ 
 			\hline 
-			\rule[-1ex]{0pt}{2.5ex} 1. Kristall große Box 511 eV &  $3.77\cdot 10^{-2}\%$\\ 
+			\rule[-1ex]{0pt}{2.5ex} 1. Kristall (große Box) 511 eV &  $3.77\cdot 10^{-2}\%$ & $1.01\cdot 10^{-2}\%$ & $(43.1\pm 47.2 )$\\ 
 			\hline 
-			\rule[-1ex]{0pt}{2.5ex} 1. Kristall große Box 1275 eV & $8.98\cdot 10^{-3}\%$ \\ 
+			\rule[-1ex]{0pt}{2.5ex} 1. Kristall (große Box) 1275 eV & $8.98\cdot 10^{-3}\%$ & $2.39\cdot 10^{-3}\%$ & $(174.8\pm 10.8)$ \\ 
 			\hline 
-			\rule[-1ex]{0pt}{2.5ex} 2. Kristall große Box 511 eV & $3.70\cdot 10^{-2}\%$ \\ 
+			\rule[-1ex]{0pt}{2.5ex} 2. Kristall (große Box) 511 eV & $3.70\cdot 10^{-2}\%$ & $1.01\cdot 10^{-2}\%$ & $(136.2\pm 51.4)$ \\ 
 			\hline 
-			\rule[-1ex]{0pt}{2.5ex} 2. Kristall große Box 1275 eV & $9.3\cdot 10^{-3}\%$ \\ 
+			\rule[-1ex]{0pt}{2.5ex} 2. Kristall (große Box) 1275 eV & $9.3\cdot 10^{-3}\%$ & $2.48\cdot 10^{-3}\%$ & $(187.0\pm 14.1)$ \\ 
 			\hline 
 			\end{tabular}
 			\end{center}
 			\caption{Effizienzen der Kristalle}
 			\end{figure}
+			
+			Auch hier ist wieder anzumerken, dass die Fehler in der Auflösung deutlich reduziert werden könnten, wenn mehr Events für diese Simulation berechnet werden. Vor allem bei dem Fit des Peaks bei 1275 eV des kleinen Kristalls (Abbildung (\ref{S2_1275_fit})) wird dies extrem sichtbar. 
+			
 			
 			\begin{figure}[H]
 				\begin{center}
@@ -196,10 +199,18 @@ Wobei $N_\textrm{peak}$ die Anzahl der Events, die in dem entsprechenden Peak st
 				\label{S2_1KGB_ganz}
 				\end{center}
 			\end{figure}
+			
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=0.7\linewidth]{Simulation2(1KGB)_1275_fit}
+				\caption{Fit des Peaks bei 1275 eV}
+				\label{S2_1KGB_1275_fit}
+				\end{center}
+			\end{figure}
 			 
 	\subsection{Aufbau Nummer 3 mit Germanium}
 		\subsubsection{Simulationsaufbau}
-			Es wird der selbe Aufbau wie die Simulation zuvor verwendet. Allerdings wird das CsI des Detektors durch Ge ersetzt um die verschiedenen Einflüsse der Materialien zu testen.
+			Es wird der selbe Aufbau wie bei der Simulation zuvor verwendet. Allerdings wird das CsI des Detektors durch Ge ersetzt um die verschiedenen Einflüsse der Materialien zu testen.
 			
 			
 		\subsubsection{Ergebnisse}
@@ -213,12 +224,65 @@ Wobei $N_\textrm{peak}$ die Anzahl der Events, die in dem entsprechenden Peak st
 				\end{center}
 			\end{figure}
 			
-			Diese erste Annahme wird auch durch die Berechnung der jeweiligen Effizienzen für die Peaks bestätigt, wobei $\epsilon_\textrm{511 eV}=2.67\cdot 10^{-2}\%$ und $\epsilon_\textrm{1275 eV}=5.44\cdot 10^{-3}\%$. Dies entspricht im Falle des 511 eV Peaks ca dem doppelten des entsprechenden Wertes aus Simulation 2. Im Falle des 1275 eV Peaks sogar dem 3.5 fachen. 
+			Diese erste Annahme wird auch durch die Berechnung der jeweiligen Effizienzen für die Peaks bestätigt, wobei $\epsilon_\textrm{511 eV}=2.67\cdot 10^{-2}\%$ und $\epsilon_\textrm{1275 eV}=5.44\cdot 10^{-3}\%$.  Für die Photopeak-Effizienzen gilt somit:$\mu_\textrm{Photopeak 511 eV}=4.44\cdot 10^{-2}\%$ und $\mu_\textrm{Photopeak 1275 eV}=9.04\cdot 10^{-3}\%$. Dies entspricht im Falle des 511 eV Peaks ca dem doppelten des entsprechenden Wertes aus Simulation 2. Im Falle des 1275 eV Peaks sogar dem 3.8 fachen. Für die Berechnung der Auflösung gilt wieder die FWHM Verteilung. Somit ergeben sich folgende Auflösungen: $(93.8\pm 1.2)$ eV bei dem 511 eV Peak und $(330.6\pm 85.2)$ eV bei dem 1275 Peak. Die hierfür verwendeten Fits finden sich in den Abbildungen (\ref{S3_511_fit}) und (\ref{S3_1275_fit}). Betrachtet man allerdings die Auflösungen der zwei unterschiedlichen Materialien ist der Unterschied vernachlässigbar klein. 
+			
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=0.7\linewidth]{Simulation3(KB)_511_fit}
+				\caption{Fit des Peaks bei 511 eV}
+				\label{S3_511_fit}
+				\end{center}
+			\end{figure}
+			
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=0.7\linewidth]{Simulation3(KB)_1275_fit}
+				\caption{Fit des Peaks bei 1275 eV}
+				\label{S3_1275_fit}
+				\end{center}
+			\end{figure}
+			
+\section{Entwicklung eines Detektorsystems}
+	\subsection{4, 8, 20 Detektor-Elemente}			
+		\subsubsection{Simulationsbeschreibung}
+			Nun soll der Detektor so designed werden, dass er symmetrisch um den $\gamma$ (1MeV) Strahl (hier in Zeichenebene) aufgebaut ist. Dieser Ionen Strahl wird mit dem Doppler Effekt behandelt ($\beta=0.7$). Die Kristalle haben alle die Ausmaße von 2x2x15cm$^3$ und sind ummantelt mit einer dünnen (1mm) Al-Box. Die $\gamma$ Quelle befindet sich 30cm vor dem Detektor. Angeordnet sollen die einzelnen Kristalle, wie in Abbildung (\ref{fig:Aufbau}) beschrieben, werden. Es werden jeweils wieder 10$^7$ Events simuliert. 
+			
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=0.7\linewidth]{Aufbau}
+				\caption{Aufbau des Detektors mit 4,8,20 Kristallen}
+				\label{fig:Aufbau}
+				\end{center}
+			\end{figure}
+
+
+		\subsubsection{Ergebnisse}
+			{\color{Red} Noch einzufügen}
 			
 			
 			
 			
 			
+			
+	\subsection{32 Detektor-Elemente}
+		\subsubsection{Simulationsaufbau}
+			In dieser Simulation wird die Höhe und Breite der Kristalle halbiert, somit haben sie nur noch eine Ausdehnung von 1x1x15cm$^3$. Jeder Kristall ist wieder von einer 1mm dicken Al-Box umgeben. Angeordnet sollen die Kristalle so, dass sie dieselbe Fläche einnehmen wie das 8-Kristalle Setup aus der letzten Simulation. 
+			
+			
+			
+		\subsubsection{Ergebnisse}
+			{\color{Red} Noch einzufügen}
+			
+			
+			
+	\subsection{Evaluation der Kosten}
+		{\color{Red} Noch einzufügen}
+		
+		
+		
+	\subsection{Entscheidung bei bestimmten Vorgaben}
+		{\color{Red} Noch einzufügen}
+
 			
 \section{Anhang}
 	\subsection{Abbildungen}
@@ -267,7 +331,7 @@ Wobei $N_\textrm{peak}$ die Anzahl der Events, die in dem entsprechenden Peak st
 	\begin{center}
 		\includegraphics[width=0.7\linewidth]{Simulation2_1275_fit}
 		\caption{Fit des Peaks bei 1275 eV des kleinen Kristalls}
-		\label{}
+		\label{S2_1275_fit}
 	\end{center}
 \end{figure}
 

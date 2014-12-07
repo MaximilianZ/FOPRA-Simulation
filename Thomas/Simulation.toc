@@ -3,18 +3,27 @@
 \contentsline {section}{\numberline {2}Introduction}{1}{section.2}
 \contentsline {section}{\numberline {3}Messung}{1}{section.3}
 \contentsline {subsection}{\numberline {3.1}Versuchsaufbau}{1}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Aktivit\IeC {\"a}t}{2}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.2}Aktivit\IeC {\"a}t}{1}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}Auswertung}{2}{subsection.3.3}
 \contentsline {section}{\numberline {4}Reproduktion der Messungen}{4}{section.4}
 \contentsline {subsection}{\numberline {4.1}Erster Aufbau}{4}{subsection.4.1}
 \contentsline {subsubsection}{\numberline {4.1.1}Simulationsaufbau}{4}{subsubsection.4.1.1}
-\contentsline {subsubsection}{\numberline {4.1.2}Ergebnisse}{5}{subsubsection.4.1.2}
-\contentsline {subsection}{\numberline {4.2}Aufbau Nummer 3}{6}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}Simulationsaufbau}{6}{subsubsection.4.2.1}
-\contentsline {subsubsection}{\numberline {4.2.2}Ergebnisse}{6}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.1.2}Ergebnisse}{4}{subsubsection.4.1.2}
+\contentsline {subsection}{\numberline {4.2}Aufbau Nummer 3}{5}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Simulationsaufbau}{5}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Ergebnisse}{5}{subsubsection.4.2.2}
 \contentsline {subsection}{\numberline {4.3}Aufbau Nummer 3 mit Germanium}{7}{subsection.4.3}
 \contentsline {subsubsection}{\numberline {4.3.1}Simulationsaufbau}{7}{subsubsection.4.3.1}
 \contentsline {subsubsection}{\numberline {4.3.2}Ergebnisse}{7}{subsubsection.4.3.2}
-\contentsline {section}{\numberline {5}Anhang}{9}{section.5}
-\contentsline {subsection}{\numberline {5.1}Abbildungen}{9}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Literaturverzeichnis}{11}{subsection.5.2}
+\contentsline {section}{\numberline {5}Entwicklung eines Detektorsystems}{9}{section.5}
+\contentsline {subsection}{\numberline {5.1}4, 8, 20 Detektor-Elemente}{9}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Simulationsbeschreibung}{9}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}Ergebnisse}{9}{subsubsection.5.1.2}
+\contentsline {subsection}{\numberline {5.2}32 Detektor-Elemente}{9}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}Simulationsaufbau}{9}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}Ergebnisse}{9}{subsubsection.5.2.2}
+\contentsline {subsection}{\numberline {5.3}Evaluation der Kosten}{9}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Entscheidung bei bestimmten Vorgaben}{9}{subsection.5.4}
+\contentsline {section}{\numberline {6}Anhang}{10}{section.6}
+\contentsline {subsection}{\numberline {6.1}Abbildungen}{10}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Literaturverzeichnis}{12}{subsection.6.2}
